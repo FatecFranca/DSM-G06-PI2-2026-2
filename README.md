@@ -8,7 +8,7 @@ Projeto Integrador (DSM). Site para **clientes** reservarem quadras por hora e *
 
 ## Como rodar (5 passos)
 
-Pré-requisitos: **Node 18+** e **MySQL 8** (ou MariaDB 10.4+) instalados e ligados.
+Pré-requisitos: **Node 18+** e **MySQL 8** instalados e ligados.
 
 ```bash
 cd Backend
