@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlaySpot - Início</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header id="siteHeader" class="header"></header>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+
+  <main class="container main-content">
+    <!-- BUSCA FILTRADA (UC002) -->
+    <section class="search-section hero-busca">
+      <div class="search-card">
+        <h2>Encontre a arena perfeita para o seu jogo</h2>
+        <form class="search-form" id="searchForm">
+          <div class="form-group">
+            <label for="fNome"><i class="fa-solid fa-magnifying-glass"></i> Arena</label>
+            <input type="text" id="fNome" placeholder="Ex: Arena Central..." maxlength="100" />
+          </div>
+          <div class="form-group">
+            <label id="lblCidade"><i class="fa-solid fa-location-dot"></i> Localidade</label>
+            <div id="fCidade"></div>
+          </div>
+          <div class="form-group">
+            <label id="lblMod"><i class="fa-solid fa-futbol"></i> Modalidade</label>
+            <div id="fModalidade"></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-search"><i class="fa-solid fa-filter"></i> Filtrar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- LISTAGEM / CATÁLOGO -->
+    <section class="catalog-section">
+      <div class="section-header">
+        <h3>Arenas Disponíveis</h3>
+        <span class="badge" id="contador">...</span>
+      </div>
+
+      <div class="arena-grid" id="arenaGrid">
+        <div class="skel"></div><div class="skel"></div><div class="skel"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 PlaySpot - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="js/home.js"></script>
+</body>
+</html>

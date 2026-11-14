@@ -1,0 +1,1131 @@
+/* ==========================================================================
+   PlaySpot - Estilos Globais e Design System
+   ========================================================================== */
+
+:root {
+  --color-primary: #023859;
+  --color-primary-hover: #012338;
+  --color-secondary: #00A86B;
+  --color-secondary-hover: #008f5a;
+  --color-bg-light: #F4F7F6;
+  --color-card-bg: #FFFFFF;
+  --color-text-dark: #1E293B;
+  --color-text-muted: #64748B;
+  --color-border: #E2E8F0;
+  --color-danger: #EF4444;
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ==========================================================================
+   CABEÇALHO & LOGO
+   ========================================================================== */
+.header {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 1 0;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+ 
+  color: #FFFFFF;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/*.admin-icon {
+  background: linear-gradient(135deg, var(--color-primary), #0d6efd) !important;
+}*/
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.brand-accent {
+  color: var(--color-secondary);
+}
+
+.brand-sub {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* NAVEGAÇÃO */
+.nav-menu {
+  display: flex;
+  gap: 24px;
+  flex: 0 0 auto;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-secondary);
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+  flex: 1 1 0;
+  justify-content: flex-end;
+}
+
+/* ==========================================================================
+   BOTÕES
+   ========================================================================== */
+.btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-secondary);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text-dark);
+}
+
+.btn-outline:hover {
+  background-color: #F8FAFC;
+  border-color: var(--color-text-muted);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL & BUSCA (UC002)
+   ========================================================================== */
+.main-content {
+  flex: 1;
+  padding: 32px 20px;
+}
+
+.search-card {
+  background-color: var(--color-card-bg);
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 36px;
+}
+
+.search-card h2 {
+  font-size: 20px;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.search-form, .booking-grid-form {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+  gap: 16px;
+  align-items: end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  outline: none;
+  background-color: #FFFFFF;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--color-secondary);
+}
+
+/* ==========================================================================
+   CATÁLOGO E CARDS DE ARENA
+   ========================================================================== */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.section-header h3 {
+  font-size: 22px;
+  color: var(--color-primary);
+}
+
+.badge {
+  background-color: #E6F4EA;
+  color: var(--color-secondary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.arena-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.arena-card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.arena-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-image {
+  position: relative;
+  height: 180px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: var(--color-text-dark);
+}
+
+.location {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+.price {
+  font-size: 14px;
+  color: var(--color-text-dark);
+  margin-bottom: 16px;
+}
+
+.price strong {
+  color: var(--color-secondary);
+  font-size: 18px;
+}
+
+/* ==========================================================================
+   PERFIL DA ARENA & RESERVA (UC001)
+   ========================================================================== */
+.arena-profile-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+  align-items: stretch;
+}
+
+.profile-img-container {
+  position: relative;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.profile-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-slide {
+  display: none;
+}
+
+.gallery-slide.active {
+  display: block;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background-color: rgba(255, 255, 255, 0.92);
+  color: var(--color-primary);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.gallery-arrow:hover {
+  background-color: #FFFFFF;
+  color: var(--color-secondary);
+}
+
+.gallery-prev { left: 14px; }
+.gallery-next { right: 14px; }
+
+.gallery-counter {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background-color: rgba(2, 56, 89, 0.75);
+  color: #FFFFFF;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-info {
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.profile-info .price {
+  width: 100%;
+  margin: 4px 0 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.profile-info h1 {
+  font-size: 28px;
+  color: var(--color-primary);
+}
+
+.profile-desc {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.booking-section-card {
+  background-color: var(--color-card-bg);
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.booking-section-card h3 {
+  font-size: 20px;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.slot-btn {
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: #FFFFFF;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.slot-btn.available:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: #F8FAFC;
+  
+}
+
+.slot-btn.occupied {
+  background-color: #F1F5F9;
+  color: #94A3B8;
+  border-color: var(--color-border);
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.booking-section-card .booking-grid-form {
+  grid-template-columns: minmax(300px, 380px) 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.booking-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.booking-side .payment-notice {
+  margin: 0;
+}
+
+.calendar {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  background-color: #FFFFFF;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.calendar-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.calendar-nav {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+  color: var(--color-primary);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.calendar-nav:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: #F8FAFC;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  padding: 4px 0;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--color-text-dark);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.calendar-day:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: #F8FAFC;
+}
+
+.calendar-day.today {
+  border-color: var(--color-primary);
+}
+
+.calendar-day.selected,
+.calendar-day.selected:hover {
+  border-color: var(--color-secondary);
+  background-color: var(--color-secondary);
+  color: #FFFFFF;
+}
+
+.payment-notice {
+  margin: 20px 0;
+  padding: 14px;
+  background-color: #FEF3C7;
+  border-left: 4px solid #F59E0B;
+  border-radius: 4px;
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  color: #92400E;
+  align-items: center;
+}
+
+/* ==========================================================================
+   PAINEL ADMINISTRATIVO E CRUD (UC003)
+   ========================================================================== */
+.card-form {
+  background-color: var(--color-card-bg);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.card-form h4 {
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.data-table th {
+  background-color: #F8FAFC;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.text-edit { color: var(--color-primary); }
+.text-danger { color: var(--color-danger); }
+
+/* ==========================================================================
+   TELAS DE AUTENTICAÇÃO (LOGIN E CADASTRO)
+   ========================================================================== */
+body.auth-page {
+  background: linear-gradient(135deg, var(--color-primary-hover) 0%, var(--color-primary) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.auth-card {
+  background-color: var(--color-card-bg);
+  width: 100%;
+  max-width: 440px;
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.auth-card-lg {
+  max-width: 680px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-header .logo-icon {
+  margin: 0 auto 12px auto;
+  width: 52px;
+  height: 52px;
+  font-size: 24px;
+}
+
+.admin-badge {
+  font-size: 11px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.auth-subtitle {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 8px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-grid-auth {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 42px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  color: var(--color-text-muted);
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-password:hover,
+.toggle-password:focus-visible {
+  color: var(--color-secondary);
+  outline: none;
+}
+
+.auth-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-dark);
+  cursor: pointer;
+}
+
+.auth-link {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.auth-footer {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-register-types {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+
+.login-role {
+  border: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.login-role legend {
+  width: 100%;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.role-option {
+  cursor: pointer;
+}
+
+.role-option input {
+  position: absolute;
+  opacity: 0;
+}
+
+.role-option span {
+  min-height: 82px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.role-option span i {
+  color: var(--color-primary);
+  font-size: 18px;
+}
+
+.role-option small {
+  color: var(--color-text-muted);
+}
+
+.role-option input:checked + span {
+  border-color: var(--color-secondary);
+  background: #effaf5;
+  box-shadow: 0 0 0 2px rgba(0, 168, 107, 0.12);
+}
+
+.slot-btn.selected {
+  border-color: var(--color-secondary);
+  background: var(--color-secondary);
+  color: #FFFFFF;
+}
+
+.reservation-list {
+  display: grid;
+  gap: 16px;
+}
+
+.reservation-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.reservation-status {
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+.footer {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  padding: 24px 0;
+  margin-top: auto;
+  font-size: 13px;
+  text-align: center;
+}
+
+.footer-content p {
+  opacity: 0.8;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+  .search-form, .booking-grid-form, .form-grid, .form-grid-auth {
+    grid-template-columns: 1fr;
+  }
+  .arena-profile-header {
+    grid-template-columns: 1fr;
+  }
+  .profile-img-container {
+    height: 260px;
+  }
+  .booking-section-card .booking-grid-form {
+    grid-template-columns: 1fr;
+  }
+  .logo-container,
+  .auth-buttons {
+    flex: 0 1 auto;
+  }
+  .nav-menu {
+    display: none;
+  }
+}
+
+
+/* ==========================================
+   MAPA DA ARENA - OPENSTREETMAP
+   ========================================== */
+
+.map-section-card {
+    background-color: var(--color-card-bg);
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 32px;
+}
+
+.map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.map-header h3 {
+    font-size: 20px;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.map-header h3 i {
+    color: var(--color-secondary);
+    margin-right: 6px;
+}
+
+.map-header p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+.map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: var(--color-secondary);
+    color: #FFFFFF;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.map-link:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+.map-container {
+    width: 100%;
+    height: 320px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.map-address {
+    margin-top: 14px;
+    color: var(--color-text-muted);
+    font-size: 13px;
+}
+
+.map-address i {
+    color: var(--color-secondary);
+    margin-right: 5px;
+}
+
+/* RESPONSIVIDADE DO MAPA */
+
+@media (max-width: 768px) {
+    .map-section-card {
+        padding: 20px;
+    }
+
+    .map-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .map-container {
+        height: 260px;
+    }
+
+    .map-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ==========================================================================
+   COMPLEMENTOS (integração com a API)
+   ========================================================================== */
+.alert {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.alert-error { background: #FEF2F2; color: #B91C1C; border: 1px solid #FECACA; }
+.alert-success { background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; }
+
+.user-greeting { font-size: 14px; font-weight: 600; color: var(--color-primary); display: inline-flex; align-items: center; gap: 6px; }
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--color-text-muted);
+  background: var(--color-card-bg);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.card-badge-extra { right: auto; left: 12px; background: var(--color-secondary); }
+
+.calendar-day:disabled { color: #CBD5E1; cursor: not-allowed; background: transparent; }
+
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+}
+.form-group textarea:focus { border-color: var(--color-secondary); }
+.form-group small { color: var(--color-text-muted); font-size: 12px; }
+.form-grid .span-2 { grid-column: 1 / -1; }
+
+.slots-empty { grid-column: 1 / -1; color: var(--color-text-muted); font-size: 13px; }
+
+.booking-total { font-size: 14px; margin: 4px 0; }
+.booking-total strong { color: var(--color-secondary); font-size: 18px; }
+
+.reservation-status.cancelada { color: var(--color-danger); }
+.reservation-card .reservation-actions { margin-top: 12px; }
+.btn-sm { padding: 6px 12px; font-size: 13px; }
+.btn-danger-outline { background: #fff; color: var(--color-danger); border: 1px solid var(--color-danger); }
+.btn-danger-outline:hover { background: #FEF2F2; }
+
+/* Painel do proprietário */
+.admin-arena {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.admin-arena-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: flex-start; }
+.admin-arena-head h4 { color: var(--color-primary); font-size: 18px; }
+.admin-arena-head .meta { font-size: 13px; color: var(--color-text-muted); }
+.admin-arena h5 { margin: 18px 0 8px; font-size: 14px; color: var(--color-text-dark); }
+
+.photo-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.photo-thumb { position: relative; width: 110px; height: 80px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); }
+.photo-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-thumb button {
+  position: absolute; top: 4px; right: 4px; width: 24px; height: 24px;
+  border: none; border-radius: 50%; background: rgba(0,0,0,.65); color: #fff; cursor: pointer; font-size: 12px;
+}
+.photo-thumb button:hover { background: var(--color-danger); }
+
+.tag { display: inline-block; background: #EEF2F7; color: var(--color-primary); border-radius: 20px; padding: 2px 10px; font-size: 12px; font-weight: 600; margin: 0 4px 4px 0; }
+
+.checkbox-row { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.checkbox-row label { display: inline-flex; gap: 6px; align-items: center; font-weight: 500; font-size: 13px; }
+.checkbox-row input { width: auto; }
+
+.quadra-form { background: #F8FAFC; border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 14px; margin-top: 10px; }
+.quadra-form .form-grid { grid-template-columns: repeat(3, 1fr); }
+
+.status-pill { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+.status-pill.ok { background: #ECFDF5; color: #047857; }
+.status-pill.cancelada { background: #FEF2F2; color: #B91C1C; }
+
+@media (max-width: 768px) {
+  .quadra-form .form-grid { grid-template-columns: 1fr; }
+}
+
+.data-table td.actions-cell { display: table-cell; white-space: nowrap; }
+.data-table td.actions-cell .btn-icon { margin-right: 10px; }

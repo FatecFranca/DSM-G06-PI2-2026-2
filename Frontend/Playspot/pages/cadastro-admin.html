@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlaySpot - Cadastro de Proprietário</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/app.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="auth-page">
+
+  <div class="auth-card auth-card-lg">
+    <div class="auth-header">
+      <div class="logo-icon admin-icon">
+        <img src="../assets/css/images/Logo.png" alt="Logo PlaySpot" class="logo-icon" />
+      </div>
+      <span class="brand-name">play<span class="brand-accent">Spot</span> <small class="admin-badge">PARCEIROS</small></span>
+      <p class="auth-subtitle">Cadastre-se para anunciar e gerenciar os horários das suas arenas</p>
+    </div>
+
+    <form class="auth-form" id="registerAdminForm">
+      <div id="msg" class="alert alert-error hidden" role="alert"></div>
+      <div class="form-grid-auth">
+        <!-- Dados Pessoais / Responsável -->
+        <div class="form-group">
+          <label for="adminName"><i class="fa-solid fa-user"></i> Nome do Responsável *</label>
+          <input type="text" id="adminName" placeholder="Ex: Maria Souza" required />
+        </div>
+
+        <div class="form-group">
+          <label for="adminEmail"><i class="fa-solid fa-envelope"></i> E-mail Corporativo *</label>
+          <input type="email" id="adminEmail" placeholder="contato@suaarena.com.br" required />
+        </div>
+
+        <div class="form-group">
+          <label for="adminCNPJ"><i class="fa-solid fa-id-card"></i> CNPJ do Proprietário *</label>
+          <input type="text" id="adminCNPJ" placeholder="00.000.000/0001-00" inputmode="numeric" maxlength="18" required />
+        </div>
+
+        <div class="form-group">
+          <label for="adminPhone"><i class="fa-solid fa-phone"></i> Telefone / Comercial *</label>
+          <input type="tel" id="adminPhone" placeholder="(16) 99999-9999" required />
+        </div>
+
+        <div class="form-group">
+          <label for="adminPassword"><i class="fa-solid fa-lock"></i> Senha *</label>
+          <div class="password-field">
+          <input type="password" id="adminPassword" placeholder="Mínimo 8 caracteres" minlength="8" autocomplete="new-password" required />
+          <button type="button" class="toggle-password" id="togglePassword" aria-label="Mostrar senha" aria-pressed="false"><i class="fa-solid fa-eye"></i></button>
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label for="adminConfirmPassword"><i class="fa-solid fa-lock"></i> Confirmar Senha *</label>
+          <input type="password" id="adminConfirmPassword" placeholder="Repita a senha" autocomplete="new-password" required />
+        </div>
+      </div>
+
+      <p class="auth-subtitle" style="margin-bottom:14px;font-size:13px">O CNPJ é obrigatório para validar o cadastro de proprietário. Os dados de cada arena serão informados no painel.</p>
+      <button type="submit" class="btn btn-secondary btn-full" id="btnEnviar">
+        <i class="fa-solid fa-store"></i> Cadastrar como Proprietário
+      </button>
+    </form>
+
+    <div class="auth-footer">
+      <p>Já possui cadastro no sistema? <a href="login.html" class="auth-link">Acessar Conta</a></p>
+      <p class="auth-switch">Quer reservar uma quadra? <a href="cadastro-usuario.html" class="auth-link">Cadastro para Atletas</a></p>
+    </div>
+  </div>
+  <script src="../js/api.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/cadastro.js"></script>
+
+</body>
+</html>

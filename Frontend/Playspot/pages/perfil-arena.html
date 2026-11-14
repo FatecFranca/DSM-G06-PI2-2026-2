@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PlaySpot - Perfil da Arena</title>
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/app.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- Leaflet - Biblioteca do mapa -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+</head>
+
+<body data-nav="index.html">
+
+  <header id="siteHeader" class="header"></header>
+  <script src="../js/api.js"></script>
+  <script src="../js/ui.js"></script>
+
+  <main class="container main-content">
+
+    <p id="avisoDono" class="alert alert-error hidden"></p>
+    <p id="pageMsg" class="alert alert-error hidden" role="alert"></p>
+
+    <!-- PERFIL DA ARENA (preenchido pela API) -->
+    <div class="arena-profile-header" id="arenaHeader">
+
+      <!-- CARROSSEL DE FOTOS -->
+      <div class="profile-img-container" id="arenaGallery">
+        <img class="gallery-slide active" id="gallerySkeleton" alt="Carregando foto" />
+
+        <button type="button" class="gallery-arrow gallery-prev hidden" id="galleryPrev" aria-label="Foto anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button type="button" class="gallery-arrow gallery-next hidden" id="galleryNext" aria-label="Próxima foto">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <span class="gallery-counter hidden" id="galleryCounter"></span>
+      </div>
+
+      <!-- INFORMAÇÕES DA ARENA -->
+      <div class="profile-info">
+        <span class="badge" id="arenaMods">Carregando...</span>
+        <h1 id="arenaNome"></h1>
+        <p class="location"><i class="fa-solid fa-location-dot"></i> <span id="arenaEndereco"></span></p>
+        <p class="location"><i class="fa-solid fa-clock"></i> <span id="arenaHorario"></span></p>
+        <p class="location hidden" id="arenaTelWrap"><i class="fa-solid fa-phone"></i> <span id="arenaTel"></span></p>
+        <p class="profile-desc" id="arenaDesc"></p>
+        <p class="price" id="arenaPreco"></p>
+        <p class="nota-linha" id="arenaNota"></p>
+        <div class="comod" id="arenaComod"></div>
+      </div>
+    </div>
+
+    <!-- SEÇÃO DE RESERVAS E HORÁRIOS -->
+    <section class="booking-section-card">
+      <h3>Selecione a Quadra, a Data e o Horário</h3>
+
+      <form id="bookingForm" class="booking-grid-form">
+
+        <div class="form-group">
+          <label id="lblQuadra"><i class="fa-solid fa-table-cells"></i> Quadra</label>
+          <div id="quadraSelect"></div>
+
+          <label id="calendarLabel" style="margin-top:14px">
+            <i class="fa-solid fa-calendar"></i> Data do Jogo
+          </label>
+          <input type="hidden" id="bookingDate" />
+
+          <div class="calendar" role="group" aria-labelledby="calendarLabel">
+            <div class="calendar-header">
+              <button type="button" class="calendar-nav" id="calPrev" aria-label="Mês anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <span class="calendar-title" id="calTitle" aria-live="polite"></span>
+              <button type="button" class="calendar-nav" id="calNext" aria-label="Próximo mês">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+            <div class="calendar-grid" id="calGrid"></div>
+          </div>
+        </div>
+
+        <div class="booking-side">
+          <div class="form-group">
+            <label><i class="fa-solid fa-clock"></i> Horários Disponíveis</label>
+            <div class="slots-grid" id="slotsGrid">
+              <p class="slots-empty">Escolha uma data para ver os horários.</p>
+            </div>
+          </div>
+
+          <p class="booking-total hidden" id="bookingTotal"></p>
+          <p id="bookingMsg" class="alert alert-error hidden" role="alert"></p>
+
+          <div class="payment-notice">
+            <i class="fa-solid fa-circle-info"></i>
+            <p>
+              <strong>Aviso:</strong>
+              O pagamento referente à reserva deverá ser realizado presencialmente na arena.
+            </p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="btnReservar">Confirmar Reserva</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="booking-section-card" id="avaliacoesSec">
+      <h3><i class="fa-solid fa-star" style="color:#F59E0B"></i> Avaliações</h3>
+      <div id="avaliacoes"><div class="skel"></div></div>
+    </section>
+
+    <!-- MAPA DAS ARENAS -->
+    <section class="map-section-card">
+      <div class="map-header">
+        <div>
+          <h3><i class="fa-solid fa-map-location-dot"></i> Arenas no mapa</h3>
+          <p>Arenas parceiras do PlaySpot (marcador azul) e locais de Franca ainda sem parceria (círculo cinza).</p>
+        </div>
+        
+      </div>
+
+      <div class="map-container">
+        <div id="mapaArenas" style="width: 100%; height: 420px; min-height: 350px;"></div>
+      </div>
+
+      <p id="mapStatus" class="map-address">
+        <i class="fa-solid fa-spinner fa-spin"></i> Carregando arenas...
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 PlaySpot - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../js/perfil-arena.js"></script>
+  <script src="../js/mapa-arenas.js"></script>
+
+</body>
+</html>
