@@ -115,4 +115,12 @@ Login devolve um **JWT** (7 dias); o frontend o envia em `Authorization: Bearer 
 
 <img width="615" height="614" alt="Uc 003" src="https://github.com/user-attachments/assets/b7c977d8-c012-45ff-8582-cd74007558ac" />
 
+## BPMN
+
+<img width="625" height="348" alt="Bpmn1" src="https://github.com/user-attachments/assets/f72f5a06-ab9c-4d54-b0d7-aa192fa83786" />
+
+<img width="633" height="469" alt="Bpmn2" src="https://github.com/user-attachments/assets/c5267a06-8095-4ac0-abf9-d24fc702c306" />
+
+
+
 
