@@ -13,7 +13,7 @@ Pré-requisitos: **Node 18+** e **MySQL 8** instalados e ligados.
 ```bash
 cd Backend
 npm install                 # 1. instala as dependências
-cp .env.example .env        # 2. crie o .env e preencha DB_USER, DB_PASSWORD e JWT_SECRET
+copy .env.example .env        # 2. crie o .env e preencha DB_USER, DB_PASSWORD e JWT_SECRET
 npm run db:setup            # 3. cria/atualiza o banco, as tabelas e os dados iniciais
 npm start                   # 4. sobe o servidor
 ```
