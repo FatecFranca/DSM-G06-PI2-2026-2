@@ -95,3 +95,16 @@ Frontend/Playspot/
 
 Login devolve um **JWT** (7 dias); o frontend o envia em `Authorization: Bearer ...`. Um proprietário só consegue mexer nas **suas** arenas.
 
+## Requisitos Funcionais
+
+
+
+## Requisitos Não Funcionais
+
+
+
+## Regras de Negócio
+
+
+
+## Casos de Uso
