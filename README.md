@@ -1,3 +1,4 @@
+<img width="479" height="204" alt="Requisitos Funcionais" src="https://github.com/user-attachments/assets/c0264e82-bd65-43e9-bb87-f96d3f976908" />
 # PlaySpot — Sistema de Reserva de Arenas
 
 Projeto Integrador (DSM). Site para **clientes** reservarem quadras por hora e **proprietários** cadastrarem arenas, fotos, quadras e acompanharem as reservas.
@@ -97,14 +98,22 @@ Login devolve um **JWT** (7 dias); o frontend o envia em `Authorization: Bearer 
 
 ## Requisitos Funcionais
 
-
+<img width="479" height="204" alt="Requisitos Funcionais" src="https://github.com/user-attachments/assets/33788fcd-e01e-4ef7-b300-120d16f68d21" />
 
 ## Requisitos Não Funcionais
 
-
+<img width="612" height="217" alt="Requisitos Não Funcionais" src="https://github.com/user-attachments/assets/efe29f08-511d-4dd2-b0e4-ec819b94ef2b" />
 
 ## Regras de Negócio
 
-
+<img width="374" height="183" alt="Regras de negócio" src="https://github.com/user-attachments/assets/6ea2a2bf-c666-498f-ab45-b74e866233f5" />
 
 ## Casos de Uso
+
+<img width="610" height="514" alt="UC 001" src="https://github.com/user-attachments/assets/4e4e1644-08bd-4a6a-b806-00ac06d61239" />
+
+<img width="612" height="411" alt="UC 002" src="https://github.com/user-attachments/assets/268e477c-0e31-4af6-b2ec-3f3175f98459" />
+
+<img width="615" height="614" alt="Uc 003" src="https://github.com/user-attachments/assets/b7c977d8-c012-45ff-8582-cd74007558ac" />
+
+
