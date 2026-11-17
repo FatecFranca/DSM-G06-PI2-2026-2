@@ -1,4 +1,3 @@
-<img width="479" height="204" alt="Requisitos Funcionais" src="https://github.com/user-attachments/assets/c0264e82-bd65-43e9-bb87-f96d3f976908" />
 # PlaySpot — Sistema de Reserva de Arenas
 
 Projeto Integrador (DSM). Site para **clientes** reservarem quadras por hora e **proprietários** cadastrarem arenas, fotos, quadras e acompanharem as reservas.
