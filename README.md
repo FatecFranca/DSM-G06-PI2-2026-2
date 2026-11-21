@@ -4,6 +4,13 @@ Projeto Integrador (DSM). Site para **clientes** reservarem quadras por hora e *
 
 **Stack:** HTML/CSS/JS puro (frontend) · Node.js + Express (API) · MySQL (banco).
 
+**Integrantes:**
+- Alexsander Gabriel Pires Silva
+- Gabriel Prates Gonçalves
+- Guilherme Teixeira Ferreira
+- Leonardo de Melo Ernesto
+- Pietro Reis Dias 
+
 ---
 
 ## Como rodar (5 passos)
